@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../course';
+// import { Course } from '../course';
 
 // import { CoursesService } from '../services/courses.service';
 
@@ -10,7 +10,7 @@ import { Course } from '../course';
   styleUrls: [ './dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  courses: Course[] = [];
+  // courses: Course[] = [];
 
   constructor() { }
 

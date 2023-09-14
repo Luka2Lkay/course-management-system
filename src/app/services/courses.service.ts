@@ -11,4 +11,9 @@ export class CoursesService {
   addCourses(data: any) {
     return this._http.post('http://localhost:3000/courses', data);
   }
+
+  getAllCourses() {
+    return this._http.get("http://localhost:3000/courses")
+  }
+  
 }

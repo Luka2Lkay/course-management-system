@@ -9,18 +9,22 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCourseComponent,
-    DashboardComponent
+    DashboardComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +38,11 @@ import { AppRoutingModule } from './app-routing.module';
     ReactiveFormsModule,
     MatSelectModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
