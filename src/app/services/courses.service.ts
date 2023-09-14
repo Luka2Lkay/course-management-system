@@ -20,4 +20,7 @@ export class CoursesService {
     return this._http.delete(`http://localhost:3000/courses/${id}`)
   }
 
+  updateCourse(id: number, data:any): Observable<any> {
+    return this._http.put(`http://localhost:3000/courses/${id}`, data)
+  }
 }

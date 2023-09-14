@@ -1,39 +1,51 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddCourseComponent } from '../add-course/add-course.component';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  styleUrls: ['./courses.component.css'],
 })
+export class CoursesComponent implements OnInit {
+  constructor(
+    private _courseService: CoursesService,
+    private dialogue: MatDialog
+  ) {}
 
-export class CoursesComponent implements OnInit{
-
-  constructor(private _courseService: CoursesService) {}
-
-courses?: any
+  courses?: any;
 
   ngOnInit(): void {
-    this.getAllCourses()
+    this.getAllCourses();
   }
 
-getAllCourses (): void {
-  this._courseService.getAllCourses().subscribe({
-    next: (res) => {
-      this.courses = res
-    }
-  })
-}
+  getAllCourses(): void {
+    this._courseService.getAllCourses().subscribe({
+      next: (res) => {
+        this.courses = res;
+      },
+    });
+  }
 
-removeCourse(id: number): void {
-  alert('Are you sure you want to delete this course?')
-  this._courseService.deleteCourse(id).subscribe({
-    next: () => {
-    
-      this.getAllCourses()
-      alert('Deleted a course')
-    },
-    error: console.log
-  })
-}
+  removeCourse(id: number): void {
+    alert('Are you sure you want to delete this course?');
+    this._courseService.deleteCourse(id).subscribe({
+      next: () => {
+        this.getAllCourses();
+      },
+      error: console.log,
+    });
+  }
+
+  viewEditForm(data: any) {
+    const dialogRef = this.dialogue.open(AddCourseComponent, { data });
+
+    dialogRef.afterClosed().subscribe({
+      next: () => {
+        this.getAllCourses();
+      },
+      error: console.log,
+    });
+  }
 }

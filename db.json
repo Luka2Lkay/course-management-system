@@ -16,5 +16,22 @@
   "profile": {
     "name": "typicode"
   },
-  "courses": []
+  "courses": [
+    {
+      "course": "math",
+      "modules": 4,
+      "duration": "6 Months",
+      "description": "Nice",
+      "availability": "available",
+      "id": 1
+    },
+    {
+      "course": "BA",
+      "modules": 4,
+      "duration": "6 Months",
+      "description": "GREAT",
+      "availability": "available",
+      "id": 2
+    }
+  ]
 }
