@@ -13,7 +13,7 @@ export class AppComponent {
 
   }
 
-  addCourse(){
+  openForm(){
     this._dialog.open(AddCourseComponent)
   }
 }
