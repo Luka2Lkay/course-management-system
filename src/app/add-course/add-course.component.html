@@ -9,24 +9,33 @@
                 <mat-label>Course</mat-label>
                 <input matInput formControlName="course" required="true">
             </mat-form-field>
-            <mat-form-field appearance="outline">
+
+            <mat-form-field>
                 <mat-label>Duration</mat-label>
-                <input matInput formControlName="duration" required="true">
+                <mat-select formControlName="duration" required="true">
+                    <mat-option *ngFor="let completionTime of completionTimes" [value] = "completionTime">{{completionTime}}</mat-option>
+                </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline">
+                <mat-label>Add description</mat-label>
+                <textarea matInput formControlName="description" required="true"></textarea>
+              </mat-form-field>
+            <mat-form-field appearance="outline">
                 <mat-label>Modules</mat-label>
-                <input matInput formControlName="modules" required="true">
+                <input matInput formControlName="modules" type="number" required="true">
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
-                <mat-label>Modules</mat-label>
-                <input matInput formControlName="modules" required="true">
+            <mat-form-field>
+                <mat-label>Availability</mat-label>
+                <mat-select formControlName="availability" required="true">
+                    <mat-option *ngFor="let avail of availabity" [value] = "avail">{{avail}}</mat-option>
+                </mat-select>
             </mat-form-field>
 
         </div>
     </div>
     <div mat-dialog-actions>
-        <button mat-raised-button>Cancel</button>
+        <button mat-raised-button [mat-dialog-close]>Cancel</button>
         <button mat-raised-button color="primary" type="submit">Save</button>
 
     </div>
