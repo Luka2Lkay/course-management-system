@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddCourseComponent } from '../add-course/add-course.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -11,7 +12,8 @@ import { AddCourseComponent } from '../add-course/add-course.component';
 export class CoursesComponent implements OnInit {
   constructor(
     private _courseService: CoursesService,
-    private dialogue: MatDialog
+    private dialogue: MatDialog,
+    private router: Router
   ) {}
 
   courses?: any;
@@ -36,6 +38,10 @@ export class CoursesComponent implements OnInit {
       },
       error: console.log,
     });
+  }
+
+  onSelect(course: any): void {
+    this.router.navigate(["/detail", course])
   }
 
   viewEditForm(data: any) {

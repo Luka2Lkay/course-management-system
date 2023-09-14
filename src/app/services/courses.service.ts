@@ -23,4 +23,8 @@ export class CoursesService {
   updateCourse(id: number, data:any): Observable<any> {
     return this._http.put(`http://localhost:3000/courses/${id}`, data)
   }
+
+  getCourse(id: number): Observable<any> {
+    return this._http.get(`http://localhost:3000/courses/${id}`)
+  }
 }
