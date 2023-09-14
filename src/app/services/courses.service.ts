@@ -8,12 +8,23 @@ import { Observable } from 'rxjs';
 export class CoursesService {
   constructor(private _http: HttpClient) {}
 
-  addCourses(data: any) {
+  addCourses(data: any): Observable<any> {
     return this._http.post('http://localhost:3000/courses', data);
   }
 
-  getAllCourses() {
+  getAllCourses(): Observable<any> {
     return this._http.get("http://localhost:3000/courses")
   }
-  
+
+  deleteCourse(id: number): Observable<any> {
+    return this._http.delete(`http://localhost:3000/courses/${id}`)
+  }
+
+  updateCourse(id: number, data:any): Observable<any> {
+    return this._http.put(`http://localhost:3000/courses/${id}`, data)
+  }
+
+  getCourse(id: number): Observable<any> {
+    return this._http.get(`http://localhost:3000/courses/${id}`)
+  }
 }
