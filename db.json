@@ -16,22 +16,5 @@
   "profile": {
     "name": "typicode"
   },
-  "courses": [
-    {
-      "course": "BA",
-      "modules": 12,
-      "duration": "6 Months",
-      "description": "TEST",
-      "availability": "available",
-      "id": 1
-    },
-    {
-      "course": "it",
-      "modules": 3,
-      "duration": "6 Months",
-      "description": "bknn",
-      "availability": "available",
-      "id": 2
-    }
-  ]
+  "courses": []
 }

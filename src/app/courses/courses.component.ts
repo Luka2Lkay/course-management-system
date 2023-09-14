@@ -21,8 +21,19 @@ getAllCourses (): void {
   this._courseService.getAllCourses().subscribe({
     next: (res) => {
       this.courses = res
-      console.log(this.courses)
     }
+  })
+}
+
+removeCourse(id: number): void {
+  alert('Are you sure you want to delete this course?')
+  this._courseService.deleteCourse(id).subscribe({
+    next: () => {
+    
+      this.getAllCourses()
+      alert('Deleted a course')
+    },
+    error: console.log
   })
 }
 }

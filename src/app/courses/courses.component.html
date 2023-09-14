@@ -12,5 +12,8 @@
     <button>
       <span class="badge">{{course.id}}</span>
       <span class="name">{{course.course}}</span>
+      <button mat-icon-button ><mat-icon color="accent">visibility</mat-icon></button>
+      <button mat-icon-button ><mat-icon color="primary">edit</mat-icon></button>
+      <button mat-icon-button (click) = "removeCourse(course.id)"><mat-icon color="warn" >delete</mat-icon></button>
     </button>
 </li>
