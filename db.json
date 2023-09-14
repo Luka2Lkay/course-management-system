@@ -16,5 +16,14 @@
   "profile": {
     "name": "typicode"
   },
-  "courses": []
+  "courses": [
+    {
+      "course": "BA",
+      "modules": 12,
+      "duration": "6 Months",
+      "description": "TEST",
+      "availability": "available",
+      "id": 1
+    }
+  ]
 }

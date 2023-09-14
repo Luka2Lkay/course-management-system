@@ -16,10 +16,14 @@
                     <mat-option *ngFor="let completionTime of completionTimes" [value] = "completionTime">{{completionTime}}</mat-option>
                 </mat-select>
             </mat-form-field>
+            </div>
+
             <mat-form-field appearance="outline">
                 <mat-label>Add description</mat-label>
                 <textarea matInput formControlName="description" required="true"></textarea>
               </mat-form-field>
+              
+              <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Modules</mat-label>
                 <input matInput formControlName="modules" type="number" required="true">
