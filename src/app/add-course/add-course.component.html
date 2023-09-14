@@ -2,28 +2,32 @@
     <h1>Course Form</h1>
 </div>
 
-<form [formGroup]="cmsForm" (ngSubmit)="save()">    
+<form [formGroup]="cmsForm" (ngSubmit)="save()">
     <div mat-dialog-content class="content">
-    <div class="row">
-       <mat-form-field appearance="outline">
-       <mat-label>Course</mat-label>
-       <input matInput formControlName="course">
-       </mat-form-field>
-       <mat-form-field appearance="outline">
-       <mat-label>Duration</mat-label>
-       <input matInput formControlName="duration">
-       </mat-form-field>
-       <mat-form-field appearance="outline">
-       <mat-label>Modules</mat-label>
-       <input matInput formControlName="modules">
-       </mat-form-field>
-  
-       </div>
-       </div>
-       <div mat-dialog-actions>
-       <button mat-raised-button>Cancel</button>
-   <button mat-raised-button color="primary" type="submit">Save</button>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Course</mat-label>
+                <input matInput formControlName="course" required="true">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Duration</mat-label>
+                <input matInput formControlName="duration" required="true">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Modules</mat-label>
+                <input matInput formControlName="modules" required="true">
+            </mat-form-field>
 
-   </div> 
+            <mat-form-field appearance="outline">
+                <mat-label>Modules</mat-label>
+                <input matInput formControlName="modules" required="true">
+            </mat-form-field>
+
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button>Cancel</button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+
+    </div>
 </form>
-
