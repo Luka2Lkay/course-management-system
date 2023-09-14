@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
