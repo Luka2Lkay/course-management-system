@@ -1,0 +1,19 @@
+<!-- <h2>My Heroes</h2>
+<ul class="heroes">
+  <li>
+    <button type="button">
+      <span class="badge">{{courses.id}}</span>
+      <span class="name">{{courses.name}}</span> 
+    </button>
+   </li>
+</ul>  -->
+
+<li *ngFor= "let course of courses">
+    <button>
+      <span class="badge">{{course.id}}</span>
+      <span class="name">{{course.course}}</span>
+      <button mat-icon-button (click) = "onSelect(course.id)"><mat-icon color="accent">visibility</mat-icon></button>
+      <button mat-icon-button (click) = "viewEditForm(course)"><mat-icon color="primary">edit</mat-icon></button>
+      <button mat-icon-button (click) = "removeCourse(course.id)"><mat-icon color="warn" >delete</mat-icon></button>
+    </button>
+</li>

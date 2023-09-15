@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { AddCourseComponent } from './add-course/add-course.component';
 import { MatDialog } from '@angular/material/dialog'
+import { CoursesService } from './services/courses.service';
+import { DialogRef } from '@angular/cdk/dialog';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog'
 })
 export class AppComponent {
   title = 'course-management-system';
-  constructor(private _dialog: MatDialog){
+  constructor(private _dialog: MatDialog, private _courseService: CoursesService){
 
   }
 

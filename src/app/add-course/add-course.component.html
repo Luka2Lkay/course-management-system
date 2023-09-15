@@ -13,30 +13,34 @@
             <mat-form-field>
                 <mat-label>Duration</mat-label>
                 <mat-select formControlName="duration" required="true">
-                    <mat-option *ngFor="let completionTime of completionTimes" [value] = "completionTime">{{completionTime}}</mat-option>
+                    <mat-option *ngFor="let completionTime of completionTimes"
+                        [value]="completionTime">{{completionTime}}</mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Add description</mat-label>
-                <textarea matInput formControlName="description" required="true"></textarea>
-              </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Add description</mat-label>
+            <textarea matInput formControlName="description" required="true"></textarea>
+        </mat-form-field>
+
+        <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Modules</mat-label>
-                <input matInput formControlName="modules" type="number" required="true">
+                <input matInput formControlName="modules" type="number" [min]="1" required="true">
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Availability</mat-label>
                 <mat-select formControlName="availability" required="true">
-                    <mat-option *ngFor="let avail of availabity" [value] = "avail">{{avail}}</mat-option>
+                    <mat-option *ngFor="let avail of availabity" [value]="avail">{{avail}}</mat-option>
                 </mat-select>
             </mat-form-field>
 
         </div>
     </div>
     <div mat-dialog-actions>
-        <button mat-raised-button [mat-dialog-close]>Cancel</button>
-        <button mat-raised-button color="primary" type="submit">Save</button>
-
+        <button mat-raised-button [mat-dialog-close]>CANCEL</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'UPDATE' : 'SAVE'}}</button>
     </div>
 </form>
