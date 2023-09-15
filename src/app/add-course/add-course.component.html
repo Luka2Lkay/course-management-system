@@ -5,13 +5,13 @@
 <form [formGroup]="cmsForm" (ngSubmit)="save()">
     <div mat-dialog-content class="content">
         <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Course</mat-label>
+            <mat-form-field id="course" appearance="outline">
+                <mat-label for="course">Course</mat-label>
                 <input matInput formControlName="course" required="true">
             </mat-form-field>
 
-            <mat-form-field>
-                <mat-label>Duration</mat-label>
+            <mat-form-field id = "duration">
+                <mat-label for="duration">Duration</mat-label>
                 <mat-select formControlName="duration" required="true">
                     <mat-option *ngFor="let completionTime of completionTimes"
                         [value]="completionTime">{{completionTime}}</mat-option>
@@ -19,20 +19,20 @@
             </mat-form-field>
         </div>
 
-        <mat-form-field appearance="outline">
-            <mat-label>Add description</mat-label>
-            <textarea matInput formControlName="description" required="true"></textarea>
+        <mat-form-field id = "description" appearance="outline">
+            <mat-label for = "description" >Add description</mat-label>
+            <textarea  matInput formControlName="description" required="true"></textarea>
         </mat-form-field>
 
         <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Modules</mat-label>
-                <input matInput formControlName="modules" type="number" [min]="1" required="true">
+            <mat-form-field id="modules" appearance="outline">
+                <mat-label for = "modules">Modules</mat-label>
+                <input  matInput formControlName="modules" type="number" [min]="1" required="true">
             </mat-form-field>
 
-            <mat-form-field>
-                <mat-label>Availability</mat-label>
-                <mat-select formControlName="availability" required="true">
+            <mat-form-field id="availability">
+                <mat-label for = "availability">Availability</mat-label>
+                <mat-select  formControlName="availability" required="true">
                     <mat-option *ngFor="let avail of availabity" [value]="avail">{{avail}}</mat-option>
                 </mat-select>
             </mat-form-field>
