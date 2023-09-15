@@ -27,3 +27,7 @@
     /* font-size: xx-large; */
     /* color: white; */
 /* } */
+
+.row {
+    display: flex;
+}
