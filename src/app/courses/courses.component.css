@@ -2,32 +2,82 @@
 
 #view{
     position: relative;
-    /* left: 90px; */
+    left: 90px;
 }
 
 #edit{
     position: relative;
-    /* left: 50px; */
+    left: 50px;
 }
 
 #delete{
     position: relative;
-    /* left: 70px; */
+    left: 70px;
 }
 
 .every{
-    position: relative;
-    left: 150px;
-    top: 40px;
+    /* position: relative;
+    left: 150px; */
+    /* top: 40px; */
     padding: 6px;
+    list-style-type: none;
+    height: 100px;
 }
 
-/* .badge{
-    /* background-color: black; */
-    /* font-size: xx-large; */
-    /* color: white; */
-/* } */
+.badge{
+
+    display: inline-block;
+    position: relative;
+    /* right: 20px; */
+    bottom:  2px;
+    font-size: small;
+    color: white;
+    /* padding: 0.8em 0.7em 0 0.7em; */
+    background-color: black;
+    line-height: 2em;
+    height: 40px;
+    /* margin-right:; */
+    
+    /* border-radius: 4px 0 0 4px; */
+      
+}
+
+.every{
+ width: 400px;
+}
+.btn-see{
+    width: 100px;
+}
 
 .row {
     display: flex;
+}
+
+.btn{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+.id{
+    position: relative;
+    bottom: 2px;
+    background-color: black;
+    margin-right: 10px;
+    color: white;
+    height: 40px;
+    width: 50px;
+    padding: 0px;
+    margin-left: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 10px;
+    /* border-buttom-left-radius: 5px; */
+   
+}
+.flex{
+    display: flex;
+    margin: 20px;
 }

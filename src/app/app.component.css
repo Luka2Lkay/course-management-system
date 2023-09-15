@@ -6,9 +6,39 @@
 .linkOne{
   margin: 5px;
   text-decoration: none;
+  height: 35px;
+  position: relative;
+  left: 600px;
+  background-color: black;
+  color: white;
 
 }
 
 .linkTwo{
-  text-decoration: none;
+  
+  height: 35px;
+  position: relative;
+  left: 620px;
+  background-color: black;
+  
+ 
+}
+.linkThree{
+  text-decoration: none !important; 
+  color: white; 
+   font-weight: bold;
+}
+
+.linkfour{
+  text-decoration: none !important;
+  color: white;
+   font-weight: bold;
+}
+
+.add-course{
+  height: 35px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+
 }

@@ -1,11 +1,9 @@
-<li *ngFor="let course of courses" class="every">
-  <div class="row">
-    <button (click)="onSelect(course.id)">
-      <span class="badge">{{course.id}}</span>
-      <span class="name">{{course.course}}</span>
-    </button>
-    <button mat-icon-button (click)="removeCourse(course.id)"><mat-icon color="warn">delete</mat-icon></button>
 
-  </div>
 
-</li>
+<div class="container m-3 flex " *ngFor="let course of courses">
+  <button type="button" class="btn">
+    <span class="id p-3">{{course.id}}</span>
+    <span class="name">{{course.course}}</span>
+  </button>
+  <button mat-icon-button (click)="removeCourse(course.id)"><mat-icon color="warn">delete</mat-icon></button>
+</div>
