@@ -1,3 +1,14 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+
+.linkOne{
+  margin: 5px;
+  text-decoration: none;
+
+}
+
+.linkTwo{
+  text-decoration: none;
+}
