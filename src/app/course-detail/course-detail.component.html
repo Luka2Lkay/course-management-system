@@ -10,10 +10,16 @@
             <p><strong>Course Id: </strong> {{selectedCourse.id}}</p>
             <p><strong>Duration: </strong> {{selectedCourse.duration}}</p>
             <p><strong>Modules: </strong> {{selectedCourse.modules}}</p>
-            <p><strong>Available: </strong> <span [class.green] = "selectedCourse.availability === 'Available'" [class.red] = "selectedCourse.availability === 'Not Available'">{{selectedCourse.availability}}</span></p>
+            <p><strong>Available: </strong> <span [class.green]="selectedCourse.availability === 'Available'"
+                    [class.red]="selectedCourse.availability === 'Not Available'">{{selectedCourse.availability}}</span>
+            </p>
         </mat-card-content>
         <mat-card-actions>
-            <!-- <button mat-icon-button (click) = "viewEditForm(course)"><mat-icon color="primary">edit</mat-icon></button> -->
+            <div class="actions">
+                <button mat-raised-button color="primary" (click)="viewEditForm(selectedCourse)">Edit</button>
+                <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+
+            </div>
         </mat-card-actions>
     </mat-card>
 

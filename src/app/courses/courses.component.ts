@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
 import { MatDialog } from '@angular/material/dialog';
-import { AddCourseComponent } from '../add-course/add-course.component';
+// import { AddCourseComponent } from '../add-course/add-course.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -42,16 +42,5 @@ export class CoursesComponent implements OnInit {
 
   onSelect(course: any): void {
     this.router.navigate(["/detail", course])
-  }
-
-  viewEditForm(data: any) {
-    const dialogRef = this.dialogue.open(AddCourseComponent, { data });
-
-    dialogRef.afterClosed().subscribe({
-      next: () => {
-        this.getAllCourses();
-      },
-      error: console.log,
-    });
   }
 }
