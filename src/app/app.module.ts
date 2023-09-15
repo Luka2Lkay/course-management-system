@@ -43,8 +43,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule,
-    MatCardModule
+    CommonModule,MatCardModule
   ],
 
   providers: [],

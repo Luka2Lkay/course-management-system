@@ -36,8 +36,11 @@
                     <mat-option *ngFor="let avail of availabity" [value]="avail">{{avail}}</mat-option>
                 </mat-select>
             </mat-form-field>
-
         </div>
+        <mat-form-field id="url" appearance="outline">
+            <mat-label for = "modules">Image url</mat-label>
+            <input  matInput formControlName="modules" required="true">
+        </mat-form-field>
     </div>
     <div mat-dialog-actions>
         <button mat-raised-button [mat-dialog-close]>CANCEL</button>
