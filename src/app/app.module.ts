@@ -12,8 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'
 import {MatCardModule} from '@angular/material/card';
-import { CommonModule } from '@angular/common';
-// import { Course } from './course';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -29,7 +27,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     AddCourseComponent,
     DashboardComponent,
     CoursesComponent,
-    // CourseDetailComponent
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +43,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,MatCardModule
   ],
 
   providers: [],
