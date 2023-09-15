@@ -43,23 +43,24 @@ export class AddCourseComponent implements OnInit {
   save() {
     if (this.cmsForm.valid) {
       if (this.data) {
-        this._coursesService.updateCourse(this.data.id, this.cmsForm.value).subscribe({
-          next: () => {
-            this.reloadCurrentRoute();
-          },
-          error: console.log,
-        });
-        this._dialogRef.close();
-      }
+        this._coursesService
+          .updateCourse(this.data.id, this.cmsForm.value)
+          .subscribe({
+            next: () => {
+              this.reloadCurrentRoute();
+              this._dialogRef.close(true);
+            },
+            error: console.log,
+          });
       } else {
         this._coursesService.addCourses(this.cmsForm.value).subscribe({
           next: () => {
             this.reloadCurrentRoute();
+            this._dialogRef.close(true);
           },
           error: console.log,
         });
-        this._dialogRef.close();
       }
     }
   }
-
+}

@@ -18,20 +18,12 @@
   },
   "courses": [
     {
-      "course": "math",
-      "modules": 4,
-      "duration": "6 Months",
-      "description": "Nice",
+      "course": "Math",
+      "modules": 2,
+      "duration": "12 Months",
+      "description": "Nive",
       "availability": "available",
-      "id": 1
-    },
-    {
-      "course": "BA",
-      "modules": 4,
-      "duration": "6 Months",
-      "description": "GREAT",
-      "availability": "available",
-      "id": 2
+      "id": 3
     }
   ]
 }
