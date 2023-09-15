@@ -1,3 +1,33 @@
+
+
+#view{
+    position: relative;
+    /* left: 90px; */
+}
+
+#edit{
+    position: relative;
+    /* left: 50px; */
+}
+
+#delete{
+    position: relative;
+    /* left: 70px; */
+}
+
+.every{
+    position: relative;
+    left: 150px;
+    top: 40px;
+    padding: 6px;
+}
+
+/* .badge{
+    /* background-color: black; */
+    /* font-size: xx-large; */
+    /* color: white; */
+/* } */
+
 .row {
     display: flex;
 }
