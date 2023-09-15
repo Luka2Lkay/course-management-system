@@ -18,20 +18,12 @@
   },
   "courses": [
     {
-      "course": "Course",
-      "modules": 4,
-      "duration": "6 Months",
-      "description": "byfnytm",
-      "availability": "available",
-      "id": 4
-    },
-    {
-      "course": "ADD",
-      "modules": 3,
+      "course": "Math",
+      "modules": 2,
       "duration": "12 Months",
-      "description": "gfdgfdf",
-      "availability": "not available",
-      "id": 5
+      "description": "Nive",
+      "availability": "available",
+      "id": 3
     }
   ]
 }

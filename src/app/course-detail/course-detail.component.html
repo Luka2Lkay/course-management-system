@@ -1,1 +1,26 @@
-<p>course-detail works!</p>
+<div *ngIf="selectedCourse">
+    <mat-card class="example-card">
+        <mat-card-header>
+
+            <mat-card-title>{{selectedCourse.course}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>{{selectedCourse.description}}</p>
+            <p><strong>Course Id: </strong> {{selectedCourse.id}}</p>
+            <p><strong>Duration: </strong> {{selectedCourse.duration}}</p>
+            <p><strong>Modules: </strong> {{selectedCourse.modules}}</p>
+            <p><strong>Available: </strong> <span [class.green]="selectedCourse.availability === 'Available'"
+                    [class.red]="selectedCourse.availability === 'Not Available'">{{selectedCourse.availability}}</span>
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="actions">
+                <button mat-raised-button color="primary" (click)="viewEditForm(selectedCourse)">Edit</button>
+                <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+
+            </div>
+        </mat-card-actions>
+    </mat-card>
+
+</div>

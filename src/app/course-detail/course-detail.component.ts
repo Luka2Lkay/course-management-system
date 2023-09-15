@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CoursesService } from '../services/courses.service';
 import { Location } from '@angular/common';
+import { AddCourseComponent } from '../add-course/add-course.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-course-detail',
@@ -14,10 +16,16 @@ export class CourseDetailComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private location: Location,
-    private _coursesService: CoursesService
+    private _coursesService: CoursesService,
+    private dialogue: MatDialog
   ) {}
 
-  ngOnInit(): void {}
+  courses?: any;
+
+  ngOnInit(): void {
+    this.getAllCourses();
+    this.getTask()
+  }
 
   getTask() {
     const courseId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -30,5 +38,26 @@ export class CourseDetailComponent implements OnInit {
     });
   }
 
-  
+  getAllCourses(): void {
+    this._coursesService.getAllCourses().subscribe({
+      next: (res) => {
+        this.courses = res;
+      },
+    });
+  }
+
+  viewEditForm(data: any) {
+    const dialogRef = this.dialogue.open(AddCourseComponent, { data });
+
+    dialogRef.afterClosed().subscribe({
+      next: () => {
+        this.getAllCourses();
+      },
+      error: console.log,
+    });
+  }
+
+  goBack(): void {
+    this.location.back()
+  }
 }
