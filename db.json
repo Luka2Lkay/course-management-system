@@ -18,44 +18,12 @@
   },
   "courses": [
     {
-      "course": "Math",
-      "modules": 2,
-      "duration": "12 Months",
-      "description": "Nive",
-      "availability": "available",
-      "id": 3
-    },
-    {
-      "course": "It",
-      "modules": 6,
-      "duration": "3 Months",
-      "description": "nice",
-      "availability": "not available",
-      "id": 4
-    },
-    {
-      "course": "g",
-      "modules": 2,
-      "duration": "3 Months",
-      "description": "as",
-      "availability": "not available",
-      "id": 5
-    },
-    {
-      "course": "Mat",
-      "modules": 5,
+      "course": "SD",
+      "modules": 12,
       "duration": "6 Months",
-      "description": "Good",
-      "availability": "available",
-      "id": 6
-    },
-    {
-      "course": "vbukb",
-      "modules": 67,
-      "duration": "3 Months",
-      "description": "njnkn",
-      "availability": "available",
-      "id": 7
+      "description": "DER",
+      "availability": "Not Available",
+      "id": 3
     }
   ]
 }

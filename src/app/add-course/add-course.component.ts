@@ -19,7 +19,7 @@ export class AddCourseComponent implements OnInit {
   });
 
   completionTimes: string[] = ['3 Months', '6 Months', '12 Months'];
-  availabity: string[] = ['available', 'not available'];
+  availabity: string[] = ['Available', 'Not Available'];
 
   constructor(
     private _fb: FormBuilder,

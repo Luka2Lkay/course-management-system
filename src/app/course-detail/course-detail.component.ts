@@ -17,7 +17,9 @@ export class CourseDetailComponent implements OnInit {
     private _coursesService: CoursesService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getTask()
+  }
 
   getTask() {
     const courseId = this.activatedRoute.snapshot.paramMap.get('id');
