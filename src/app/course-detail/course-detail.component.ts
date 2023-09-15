@@ -29,4 +29,6 @@ export class CourseDetailComponent implements OnInit {
       error: console.log,
     });
   }
+
+  
 }
