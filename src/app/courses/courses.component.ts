@@ -40,8 +40,8 @@ export class CoursesComponent implements OnInit {
     });
   }
 
-  onSelect(course: any): void {
-    this.router.navigate(["/detail", course])
-    // console.log(course)
+  onSelect(id: number): void {
+    const shortenedId = id.toString().slice(5,10)
+    this.router.navigate(["/detail", shortenedId])
   }
 }

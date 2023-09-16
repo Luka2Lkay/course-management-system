@@ -1,9 +1,19 @@
 <h2>Available Courses</h2>
 
 <div class="courses-menu">
+  <div class="cards">
+    <div *ngFor="let course of availableCourses">
 
-  <a *ngFor= "let course of availableCourses">
-    {{course.course}}
-  </a>
+
+      <mat-card class="card" (click)="onSelect(course._id)">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <mat-card-title style="text-align: center;">{{course.course | uppercase}}</mat-card-title>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
+  </div>
 
 </div>

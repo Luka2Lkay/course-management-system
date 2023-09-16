@@ -3,13 +3,20 @@
     background-color: #EEE;
     width: 40%;
     margin: 0 auto;
+    justify-content: space-between;
 }
 
 .row:hover {
     background-color: #e6e6e6;
 }
 
-.courseId {
-    max-width: 10em;
+.info {
+    display: flex;
+}
+
+.courseId 
+{   min-width: 6em;
+    max-width: 6em;
+
     background-color: #405061;
 }

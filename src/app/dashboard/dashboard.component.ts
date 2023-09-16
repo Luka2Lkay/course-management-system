@@ -20,12 +20,17 @@ export class DashboardComponent implements OnInit {
     this.CoursesService.getAllCourses().subscribe({
       next: (res) => {
         const available = res.filter((courses: any) => {
-          return courses.availability === 'available';
+          return courses.availability === 'Yes';
         });
 
         this.availableCourses = available;
       },
       error: console.log,
     });
+  }
+
+  onSelect(id: number): void {
+    const shortenedId = id.toString().slice(5,10)
+    this.router.navigate(["/detail", shortenedId])
   }
 }

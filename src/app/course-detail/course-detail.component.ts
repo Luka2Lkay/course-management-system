@@ -24,14 +24,17 @@ export class CourseDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllCourses();
-    this.getTask()
+    this.getTask();
   }
 
   getTask() {
     const courseId = this.activatedRoute.snapshot.paramMap.get('id');
     this._coursesService.getAllCourses().subscribe({
       next: (res) => {
-        const course = res.find((el: any) => el.id == courseId);
+        const course = res.find((el: any) =>
+          el._id.toString().slice(5,10).includes(courseId)
+        );
+
         this.selectedCourse = course;
       },
       error: console.log,
@@ -58,6 +61,6 @@ export class CourseDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.location.back()
+    this.location.back();
   }
 }

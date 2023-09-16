@@ -1,18 +1,22 @@
 <div *ngIf="selectedCourse">
-    <mat-card class="example-card">
+    <mat-card class="card">
         <mat-card-header>
 
             <mat-card-title>{{selectedCourse.course}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <img mat-card-image height="250px" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
         <mat-card-content>
+            <p><strong>Course Id: </strong> {{selectedCourse._id.slice(5, 10)}}</p>
             <p>{{selectedCourse.description}}</p>
-            <p><strong>Course Id: </strong> {{selectedCourse.id}}</p>
-            <p><strong>Duration: </strong> {{selectedCourse.duration}}</p>
-            <p><strong>Modules: </strong> {{selectedCourse.modules}}</p>
-            <p><strong>Available: </strong> <span [class.green]="selectedCourse.availability === 'Available'"
-                    [class.red]="selectedCourse.availability === 'Not Available'">{{selectedCourse.availability}}</span>
-            </p>
+
+            <div class="specifics">
+                <p>Duration: {{selectedCourse.duration}}</p>
+                <p>Modules: {{selectedCourse.modules}}</p>
+                <p>Available: <span [class.white]="selectedCourse.availability === 'Yes'"
+                        [class.red]="selectedCourse.availability === 'No'">{{selectedCourse.availability}}</span>
+                </p>
+            </div>
+
         </mat-card-content>
         <mat-card-actions>
             <div class="actions">
