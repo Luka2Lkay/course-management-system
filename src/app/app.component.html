@@ -6,8 +6,12 @@
   <span class="example-spacer"></span>
   <button mat-raised (click)="openForm()" class="add-course">Add Course</button>
 </mat-toolbar>
-<button class="linkOne"><a routerLink="/dashboard" class="linkThree">Dashboard</a></button>
-<button class="linkTwo"><a routerLink="/courses"class="linkfour">Courses</a></button>
+
+<nav>
+<button mat-raised-button><a routerLink="/dashboard">Dashboard</a></button>
+<button mat-raised-button><a routerLink="/courses">Courses</a></button>
+</nav> 
+
 <router-outlet></router-outlet>
 
 

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
 import { MatDialog } from '@angular/material/dialog';
-// import { AddCourseComponent } from '../add-course/add-course.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -34,6 +33,7 @@ export class CoursesComponent implements OnInit {
     alert('Are you sure you want to delete this course?');
     this._courseService.deleteCourse(id).subscribe({
       next: () => {
+    
         this.getAllCourses();
       },
       error: console.log,
@@ -42,5 +42,6 @@ export class CoursesComponent implements OnInit {
 
   onSelect(course: any): void {
     this.router.navigate(["/detail", course])
+    // console.log(course)
   }
 }

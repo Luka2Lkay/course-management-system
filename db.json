@@ -23,19 +23,7 @@
       "duration": "12 Months",
       "description": "Nive",
       "availability": "available",
-<<<<<<< HEAD
-      "id": 4
-    },
-    {
-      "course": "efusdiofl",
-      "modules": 3,
-      "duration": "6 Months",
-      "description": "dsbkhed",
-      "availability": "Available",
-      "id": 5
-=======
       "id": 3
->>>>>>> 649bcd537c8f2bc081a985a6ecf37d2c9643dabc
     }
   ]
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { Course } from '../course'
+import { Router } from '@angular/router';
 import { CoursesService } from '../services/courses.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { CoursesService } from '../services/courses.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor(private CoursesService: CoursesService) {}
+  constructor(private CoursesService: CoursesService, private router: Router) {}
 
   availableCourses?: any[];
 

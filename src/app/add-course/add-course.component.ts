@@ -10,12 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-course.component.css'],
 })
 export class AddCourseComponent implements OnInit {
+  imageData?: string;
+
   cmsForm: FormGroup = this._fb.group({
     course: '',
     modules: '',
     duration: '',
     description: '',
     availability: '',
+    imageUrl: '',
   });
 
   completionTimes: string[] = ['3 Months', '6 Months', '12 Months'];
@@ -38,6 +41,24 @@ export class AddCourseComponent implements OnInit {
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
       this.router.navigate([currentUrl]);
     });
+  }
+
+  selectedFile?: any;
+
+  getSelectedFile(event: any): void {
+    this.selectedFile = event.target.files[0];
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
+    this.cmsForm.patchValue(this.selectedFile);
+
+    if (this.selectedFile && allowedTypes.includes(this.selectedFile.type)) {
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        this.imageData = reader.result as string;
+      };
+
+      reader.readAsDataURL(this.selectedFile);
+    }
   }
 
   save() {

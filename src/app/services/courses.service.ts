@@ -9,20 +9,20 @@ import { Observable } from 'rxjs';
 
 export class CoursesService {
   
-  // apiUrl = 'http://localhost:3300/courses'
+  apiUrl = 'http://localhost:3300/course'
 
   constructor(private _http: HttpClient) {}
 
   addCourses(data: any): Observable<any> {
-    return this._http.post('http://localhost:3300/create', data);
+    return this._http.post(`${this.apiUrl}/create`, data);
   }
 
   getAllCourses(): Observable<any> {
-    return this._http.get('http://localhost:3300/course')
+    return this._http.get(this.apiUrl)
   }
 
   deleteCourse(id: number): Observable<any> {
-    return this._http.delete(`'http://localhost:3300/course'${id}`)
+    return this._http.delete(`http://localhost:3300/course/${id}`)
   }
 
   updateCourse(id: number, data:any): Observable<any> {
