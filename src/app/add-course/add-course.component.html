@@ -37,15 +37,13 @@
                 </mat-select>
             </mat-form-field>
         </div>
-        <!-- <mat-form-field id="url" appearance="outline">
-            <mat-label for = "url">Image url</mat-label> -->
-        <!-- <button mat-raised-button (click) = "fileInput.click()">Choose Image</button> -->
-        <input (change)="getSelectedFile($event)" #fileInput formControlName="imageUrl" type="file"
+    
+        <input (change)="getSelectedFile($event)" #fileInput type="file"
             required="true">
         <div *ngIf="imageData">
             <img [src]="imageData" [alt] = "cmsForm.value.course">
         </div>
-        <!-- </mat-form-field> -->
+
     </div>
     <div mat-dialog-actions>
         <button mat-raised-button [mat-dialog-close]>CANCEL</button>

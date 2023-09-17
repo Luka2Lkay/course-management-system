@@ -5,11 +5,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-
-
 export class CoursesService {
-  
-  apiUrl = 'http://localhost:3300/course'
+  apiUrl = 'http://localhost:3300/course';
 
   constructor(private _http: HttpClient) {}
 
@@ -18,18 +15,18 @@ export class CoursesService {
   }
 
   getAllCourses(): Observable<any> {
-    return this._http.get(this.apiUrl)
+    return this._http.get(this.apiUrl);
   }
 
   deleteCourse(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3300/course/${id}`)
+    return this._http.delete(`http://localhost:3300/course/${id}`);
   }
 
-  updateCourse(id: number, data:any): Observable<any> {
-    return this._http.put(`'http://localhost:3300/course'${id}`, data)
+  updateCourse(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3300/course/${id}`, data);
   }
 
   getCourse(id: number): Observable<any> {
-    return this._http.get(`'http://localhost:3300/course'${id}`)
+    return this._http.get(`'http://localhost:3300/course/'${id}`);
   }
 }
