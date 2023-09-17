@@ -6,7 +6,7 @@
 
 
       <mat-card class="card" (click)="onSelect(course._id)">
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <img mat-card-image src={{course.imageUrl}} alt={{course.course}}>
         <mat-card-content>
           <mat-card-title style="text-align: center;">{{course.course | uppercase}}</mat-card-title>
         </mat-card-content>
