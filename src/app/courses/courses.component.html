@@ -3,7 +3,7 @@
     <div class="info" (click)="onSelect(course._id)">
       <mat-list-item role="listitem" class="courseId"><span
           style="color: #fff;">{{course._id.toString().slice(5,10) | uppercase}}</span></mat-list-item>
-      <mat-list-item role="listitem">{{course.course | uppercase}}</mat-list-item>
+      <mat-list-item [class.red] = "course.availability == 'No'" role="listitem">{{course.course | uppercase}}</mat-list-item>
     </div>
     <div class="button">
       <button mat-icon-button (click)="removeCourse(course._id)"><mat-icon color="warn">delete</mat-icon></button>
