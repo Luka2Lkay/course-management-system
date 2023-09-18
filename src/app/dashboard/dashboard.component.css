@@ -1,8 +1,3 @@
-.card {
-  max-width: 300px;
-  cursor: pointer;
-}
-
 .header-image {
   background-size: cover;
 }
@@ -10,9 +5,22 @@
 h2 {
   text-align: center;
   text-decoration: underline;
+  font-weight: bolder;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-around;
+/* Tested code here for grid view of courses */
+.courses-menu {
+  display: grid;
+  grid: 150px / auto auto auto;
+  grid-gap: 20px;
+}
+
+.courses-menu > div {
+  text-align: center;
+  padding: 50px ;
+}
+
+.mat-mdc-card-content {
+  display: block;
+  padding: 0 8px;
 }
