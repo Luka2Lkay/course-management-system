@@ -1,11 +1,11 @@
-<h2>Available Courses</h2>
+<h2 style="text-align: center;"><u>Available Courses</u></h2>
 
 <div class="courses-menu">
   <div *ngFor="let course of availableCourses">
-    <mat-card (click)="onSelect(course._id)">
-      <img width="342" height="95" mat-card-image src={{course.imageUrl}} alt={{course.course}}>
+    <mat-card class="card" (click)="onSelect(course._id)">
+      <img style="margin-bottom: 0.5em" height="250px" mat-card-image src={{course.imageUrl}} alt={{course.course}}>
       <mat-card-content>
-        <mat-card-title width="100" style="text-align: center; font-weight: bolder;  font-size: 13.5px;">{{course.course }}</mat-card-title>
+        <mat-card-title>{{course.course }}</mat-card-title>
       </mat-card-content>
     </mat-card>
   </div>
