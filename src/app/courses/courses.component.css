@@ -15,8 +15,8 @@
 }
 
 .courseId 
-{   min-width: 6em;
-    max-width: 6em;
+{   min-width: 8em;
+    max-width: 8em;
     font-weight: bolder;
     background-color: #4e6074;
 }
